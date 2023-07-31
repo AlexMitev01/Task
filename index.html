@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>User Data Form</h1>
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+        <label for="favoriteColor">Favorite Color:</label>
+        <select id="favoriteColor" required>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="white">White</option>
+            <option value="black">Black</option>
+        </select>
+        <label>Contact Preference:</label>
+        <label for="emailPreference">Email</label>
+        <input type="checkbox" id="emailPreference" name="contactPreference" value="email">
+        <label for="phonePreference">Phone call</label>
+        <input type="checkbox" id="phonePreference" name="contactPreference" value="phone">
+        <label for="smsPreference">SMS</label>
+        <input type="checkbox" id="smsPreference" name="contactPreference" value="sms">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>User Data Table</h1>
+    <div id="dataTableContainer">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Favorite Color</th>
+                    <th>Contact Preference</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be added here dynamically -->
+            </tbody>
+        </table>
+        <div id="noDataMessage">No data to display.</div>
+    </div>
+
+    <!-- Modal/dialog for JSON export -->
+    <div id="exportModal">
+        <pre id="jsonData"></pre>
+        <button id="closeExportModal">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <div class="bottom-text">
+        <p>
+            <span class="normal-text">This code sample has been created by Alex Mitev.</span>
+            <br>
+            The sole purpose of it is to fulfill an interview task assignment.
+        </p>
+    </div>
+
+</body>
+
+</html>
